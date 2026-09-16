@@ -9,7 +9,7 @@ export const config = {
   mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017',
   mongoDb: process.env.MONGODB_DB || 'cmpdi_ai',
   groqApiKey: process.env.GROQ_API_KEY || '',
-  groqModel: process.env.GROQ_MODEL || 'llama-3.1-8b-instant',
+  groqModel: process.env.GROQ_MODEL || 'openai/gpt-oss-20b',
   workerUrl: process.env.WORKER_URL || 'http://localhost:5001',
   uploadDir: path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../uploads'),
   corsOrigin: process.env.CORS_ORIGIN || true

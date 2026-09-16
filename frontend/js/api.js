@@ -1,4 +1,4 @@
-export const API='http://localhost:4000/api/v1';
+export const API='https://cmpdi-backend-gfmy.onrender.com/api/v1';
 async function request(path, options={}){const r=await fetch(`${API}${path}`,options);let d={};try{d=await r.json()}catch{}if(!r.ok)throw new Error(d.error||d.detail||`Request failed (${r.status})`);return d}
 export const getHealth=()=>request('/health');
 export const uploadPdf=file=>{const f=new FormData();f.append('file',file);return request('/upload',{method:'POST',body:f})};
